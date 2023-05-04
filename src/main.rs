@@ -30,22 +30,36 @@ use std::cmp::Ordering;
 
 // }
 
+// fn main() {
+//     // Unsiged integer : u8, u16, u32, u64, u128, usize
+//     // Signed integer : i8, i16, i32, i64, i128, isize
+//     // Float : f32, f64
+
+//     println!("Max u32 : {}", u32::MAX);
+//     println!("Max u64 : {}", u64::MAX);
+//     println!("Max usize : {}", usize::MAX);
+//     println!("Max u128 : {}", u128::MAX);
+
+//     println!("Max f32: {}", f32::MAX);
+//     println!("Max f64 : {}", f64::MAX);
+
+//     let is_true = true;
+//     //let _is_true = true; Put an underscore and Rust compilor ignore it if it is unused
+
+//     let my_grade = 'A';
+// }
+
 fn main() {
-    // Unsiged integer : u8, u16, u32, u64, u128, usize
-    // Signed integer : i8, i16, i32, i64, i128, isize
-    // Float : f32, f64
+    let num_1: f32 = 1.111111111111111;
+    println!("f32 : {}", num_1 + 0.111111111111111); // 6 digits accuracy
+    let num_2: f64 = 1.111111111111111;
+    println!("f64 : {}", num_2 + 0.111111111111111); // 14 digits accuracy
 
-    println!("Max u32 : {}", u32::MAX);
-    println!("Max u64 : {}", u64::MAX);
-    println!("Max usize : {}", usize::MAX);
-    println!("Max u128 : {}", u128::MAX);
-
-    println!("Max f32: {}", f32::MAX);
-    println!("Max f64 : {}", f64::MAX);
-
-    let is_true = true;
-    //let _is_true = true; Put an underscore and Rust compilor ignore it if it is unused
-
-    let my_grade = 'A';
-
+    let num_3: u32 = 6;
+    let num_4: u32 = 4;
+    println!("6 + 4 = {}", num_3 + num_4);
+    println!("6 - 4 = {}", num_3 - num_4);
+    println!("6 * 4 = {}", num_3 * num_4);
+    println!("6 / 4 = {}", num_3 / num_4);
+    println!("6 % 4 = {}", num_3 % num_4);
 }
