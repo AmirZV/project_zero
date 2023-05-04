@@ -64,7 +64,30 @@ use std::cmp::Ordering;
 //     println!("6 % 4 = {}", num_3 % num_4);
 // }
 
+// fn main() {
+//     let random_num = rand::thread_rng().gen_range(1..101);
+//     println!("Random : {}", random_num);
+// }
+
 fn main() {
-    let random_num = rand::thread_rng().gen_range(1..101);
-    println!("Random : {}", random_num);
+    let random_num = rand::thread_rng().gen_range(1..100);
+    loop {
+        println!("Enter an Interger between 1 and 100 : ");
+        let mut input_num = String::new();
+        io::stdin().read_line(&mut input_num)
+            .expect("Dind't Receive Input!");
+
+        let mut input_num: i32 = input_num.trim().parse()
+            .expect("msg");
+
+        match input_num.cmp(&random_num) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Greater => println!("Too big!"),
+            Ordering::Equal => {
+                println!("You Win!");
+                break;
+            }
+        }
+
+    }
 }
